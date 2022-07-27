@@ -1,22 +1,13 @@
-import React , {useState} from 'react'
+import React, {useState} from 'react'
 
-export default function Kuizcard( { kuizcard }) {
-  const [flip , setFlip] = useState(false)
-  return (
-    <div 
-      className={`card ${flip ? 'flip' : ''}`}
-      onClick = {() => setFlip(!flip)}>
-      <div className='front'>
-         {kuizcard.kuiz}  
-         <div className='kuizcard-choices'>
-          { kuizcard.choices.map(choice => {
-            return <div className='kuizcard-choice' key={choice}>{choice}</div>
-          })}
-         </div> 
-
-      </div>
-      <div className='back-side'>{kuizcard.solution}</div>
-      {flip ? kuizcard.solution : kuizcard.kuiz}
-    </div>
-  )
+export default function Kuizcard({kuizcard}) {
+  const [flip , setFlip ] = useState(false)
+ return (
+  <div onClick = {() => setFlip(!flip)}>
+    {flip? kuizcard.solution : kuizcard.kuiz }
+  </div>
+ )
 }
+
+
+
