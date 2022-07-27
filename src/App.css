@@ -13,6 +13,10 @@ body{
 .card.flip{
   --rotate-y: 180deg;
 }
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .45);
+}
  
 .card {
   display: flex;
@@ -20,12 +24,15 @@ body{
   align-items: center;
   position: relative;
   border-radius: .27rem;
-  transform: perspective(2500px) rotateY(var(--rotate-y, 0));
+  transform: perspective(1400px) rotateY(var(--rotate-y, 0));
   transform-style: preserve-3d;
   box-shadow: 0 0 7px 4px rgb(52, 46, 41);
   background-color: rgb(84, 72, 56);
   height: 175px;
   width: 175px;
-  transition: 1000ms;
-
+  transition: 700ms;
+  cursor: pointer;
+  
 }
+
+
