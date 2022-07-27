@@ -1,6 +1,6 @@
 import React , { useState } from "react";
 import KuizcardList from "./components/KuizcardList"
-import './app.css';
+import './App.css';
 
 function App() {
   const [kuizcards , setKuizcards] = useState(SAMPLE_KUIZCARDS)
