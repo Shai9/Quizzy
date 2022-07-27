@@ -1,0 +1,29 @@
+body{
+  background-color: antiquewhite;
+}
+
+.card{
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: .25;
+  box-shadow: 0 0 30px darkslategray;
+  background-color: bisque;
+  justify-content: center;
+  height: 175px;
+  width: 175px;
+  
+}
+.card.back-side{
+  position: absolute;
+  padding: 2rem;
+  backface-visibility: hidden;
+  transform: rotateY('180');
+}
+
+.card.front{
+  position: absolute;
+  padding: 2rem;
+  backface-visibility: hidden;
+
+}
