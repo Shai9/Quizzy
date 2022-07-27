@@ -1,9 +1,19 @@
-import React , { useState } from "react";
+import React , { useEffect, useState } from "react";
 import KuizcardList from "./components/KuizcardList"
 import './App.css';
+import axios from 'axios'
+
 
 function App() {
   const [kuizcards , setKuizcards] = useState(SAMPLE_KUIZCARDS)
+
+  useEffect(()=>{
+     axios
+     .get('https://opentdb.com/api_category.php')
+     .then(response => {
+        console.log(response.data)
+     })
+  }, [])
   return (
     < KuizcardList kuizcards = { kuizcards }/>
   );

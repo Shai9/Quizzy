@@ -34,5 +34,21 @@ body{
   cursor: pointer;
   
 }
+.card .front {
+  left: 0;
+  text-shadow: 2rem;
+}
 
+.kuizcard-choices {
+  margin-top: .7rem;
+}
 
+.kuizcard-choice {
+  margin-top: .35rem;
+  color: white;
+  font-size: .95rem;
+}
+
+.kuizcard-choice:first-child {
+  margin-top: .2rem;
+}
