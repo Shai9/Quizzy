@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/https//Shai9.github.com/kuizzy/static/css/main.bd9a440d.css",
+    "main.js": "/https//Shai9.github.com/kuizzy/static/js/main.cbb33935.js",
+    "index.html": "/https//Shai9.github.com/kuizzy/index.html",
+    "main.bd9a440d.css.map": "/https//Shai9.github.com/kuizzy/static/css/main.bd9a440d.css.map",
+    "main.cbb33935.js.map": "/https//Shai9.github.com/kuizzy/static/js/main.cbb33935.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd9a440d.css",
+    "static/js/main.cbb33935.js"
+  ]
+}
