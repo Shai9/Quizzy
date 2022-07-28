@@ -33,7 +33,8 @@ body{
 }
 
 .form-group > label {
-  color: white;
+  color: whitesmoke;
+  font-size: 22px;
   margin-bottom: .27rem;
   font-size: medium;
 }
