@@ -1,7 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 export default function Kuizcard({kuizcard}) {
   const [flip, setFlip] = useState(false)
+  
+
+
   return (
     <div className={`card ${flip ? 'flip': ''}`}
      onClick={()=> setFlip(!flip)}>
@@ -13,7 +16,9 @@ export default function Kuizcard({kuizcard}) {
           })}
          </div>
       </div>
-      <div className='back'>{kuizcard.solution}</div>
+      <div className='back'>
+        {kuizcard.solution}
+        </div>
       </div>
   )
 }

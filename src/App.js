@@ -29,7 +29,9 @@ function App() {
   return textArea.value
  }
   return (
+    <div className="wrapper">
     < KuizcardList kuizcards = { kuizcards }/>
+    </div>
   );
 }
 const SAMPLE_KUIZCARDS = [

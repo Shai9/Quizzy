@@ -1,11 +1,24 @@
 body{
   background-color: rgb(116, 90, 56);
+  margin: 0;
 }
 .card .front,
 .card .back {
   position:absolute;
   padding: 1rem;
   backface-visibility: hidden;
+  
+}
+.wrapper{
+  max-width: 9040px;
+  margin:1rem 3rem ;
+}
+
+.card-grid{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
 }
 .card .back{
   transform: rotateY(180deg);
@@ -29,7 +42,6 @@ body{
   box-shadow: 0 0 7px 4px rgb(52, 46, 41);
   background-color: rgb(84, 72, 56);
   height: 175px;
-  width: 175px;
   transition: 700ms;
   cursor: pointer;
   
