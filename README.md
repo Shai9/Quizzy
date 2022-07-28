@@ -8,7 +8,10 @@ Quizzy is an app for everyone who want to put his/her cogs to work with up to da
 
 ## SetUp
 
-Fork and clone this repository to your local environment to get to see the related files()
+Fork and clone this repository to your local environment to get to see the related files
+## Links
+[Fork and clone](git@github.com:Shai9/kuizzy.git)
+
 Tools needed;
   -A terminal 
   -A text editor 
