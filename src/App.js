@@ -1,4 +1,4 @@
-import React , { useEffect, useState } from "react";
+import React , { useEffect, useState ,useRef } from "react";
 import KuizcardList from "./components/KuizcardList"
 import './App.css';
 import axios from 'axios'
@@ -6,6 +6,11 @@ import axios from 'axios'
 
 function App() {
   const [kuizcards , setKuizcards] = useState(SAMPLE_KUIZCARDS)
+  
+  const categoryEl = useRef()
+
+
+
  useEffect(()=> {
   axios
   .get('https://opentdb.com/api.php?amount=10')
@@ -28,10 +33,22 @@ function App() {
   textArea.innerHTML=str
   return textArea.value
  }
+
+ function handleSubmit(event){
+  event.preventDefault()
+ }
   return (
+    <>
+    <form className="heading" onSubmit={ handleSubmit }>
+      <div className="form-group">
+          <label htmlForm="category">Category</label>
+          <select id="category" ref={categoryEl}></select>
+      </div>
     <div className="wrapper">
     < KuizcardList kuizcards = { kuizcards }/>
     </div>
+    </form>
+    </>
   );
 }
 const SAMPLE_KUIZCARDS = [
