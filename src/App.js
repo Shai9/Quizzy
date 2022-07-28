@@ -11,17 +11,23 @@ function App() {
   .get('https://opentdb.com/api.php?amount=10')
   .then(response => {
     setKuizcards(response.data.results.map((questionItem, index) => {
-      const solution =questionItem.correct_answer
-      const choices= [...questionItem.incorrect_answers] 
+      const solution =decode(questionItem.correct_answer)
+      const choices= [...questionItem.incorrect_answers.map(a=> decode(a)), solution] 
       return {
       id: `${index}-$(Date.now)}`,
-      question:questionItem.question,
-      choices:choices,
+      kuiz: decode(questionItem.question),
+      solution:solution,
       choices:choices.sort(()=>Math.random() - .5)
     }}))
     console.log(response.data)
   })
  },[])
+
+ function decode(str) {
+  const textArea =document.createElement('textarea')
+  textArea.innerHTML=str
+  return textArea.value
+ }
   return (
     < KuizcardList kuizcards = { kuizcards }/>
   );
