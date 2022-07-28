@@ -6,13 +6,14 @@ import axios from 'axios'
 
 function App() {
   const [kuizcards , setKuizcards] = useState(SAMPLE_KUIZCARDS)
-  
+  const [categories, setCategories] =useState([])
   const categoryEl = useRef()
+  const amountEl = useRef()
 
   useEffect(()=> {
     axios.get('https://opentdb.com/api_category.php')
          .then(response => {
-          console.log(response.data)
+          setCategories(response.data.trivia_categories)
          })
   })
 
@@ -49,12 +50,24 @@ function App() {
     <form className="heading" onSubmit={ handleSubmit }>
       <div className="form-group">
           <label htmlFor="category">Category</label>
-          <select id="category" ref={categoryEl}></select>
+         <select id="category" ref={categoryEl}>
+            {categories.map(category => {
+              return <option value={category.id} key={category.id}>{category.name } </option>
+            })}
+         </select>
       </div>
+      <div className="form-group">
+        <label htmlFor="amount">Number of Kuizzes</label>
+        <input type= "number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
+
+      </div>
+      <div className="form-group">
+        <button className="button">Refresh</button>
+      </div>
+      </form>
     <div className="wrapper">
     < KuizcardList kuizcards = { kuizcards }/>
     </div>
-    </form>
     </>
   );
 }
