@@ -1,7 +1,7 @@
 # Application Name
--Kuizzy App
+.Kuizzy App
 
--This project was bootstrapped with [Create React App]
+.This project was bootstrapped with [Create React App]
 
 ## Brief Description
 Quizzy is an app for everyone who want to put his/her cogs to work with up to date questions in different categories , music ,mathematics , football etc.
@@ -38,6 +38,6 @@ Feel free to contact me when you ran into issues with the app .Ideas and fresh i
 ## Contacts
 Email : calmusdennis254@gmail.com.
 Tel : +254 795 375494.
-License
+## License
 GNU General Public License .
 Copyright (c) {2022}.
