@@ -9,9 +9,30 @@ body{
   backface-visibility: hidden;
   
 }
+
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  background-color: rgb(186, 109, 22);
+  box-shadow: 0 0 7px 4px rgb(52, 46, 41);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: .7rem;
+}
 .wrapper{
   max-width: 9040px;
   margin:1rem 3rem ;
+}
+
+.form-group > label {
+  color: black;
+  margin-bottom: .27rem;
+  font-size: medium;
 }
 
 .card-grid{
@@ -29,6 +50,19 @@ body{
 .card:hover {
   --translate-y: -2px;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, .45);
+}
+
+.button{
+  background-color :green;
+  color: rgb(152, 124, 12);
+  border-radius: .7em;
+  cursor: pointer;
+  padding: .4em 1em;
+  margin-bottom: .27rem;
+
+}
+.button:hover{
+  background-color:rgb(163, 121, 21);
 }
  
 .card {
