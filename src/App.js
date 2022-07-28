@@ -6,14 +6,22 @@ import axios from 'axios'
 
 function App() {
   const [kuizcards , setKuizcards] = useState(SAMPLE_KUIZCARDS)
-
-  useEffect(()=>{
-     axios
-     .get('https://opentdb.com/api_category.php')
-     .then(response => {
-        console.log(response.data)
-     })
-  }, [])
+ useEffect(()=> {
+  axios
+  .get('https://opentdb.com/api.php?amount=10')
+  .then(response => {
+    setKuizcards(response.data.results.map((questionItem, index) => {
+      const solution =questionItem.correct_answer
+      const choices= [...questionItem.incorrect_answers] 
+      return {
+      id: `${index}-$(Date.now)}`,
+      question:questionItem.question,
+      choices:choices,
+      choices:choices.sort(()=>Math.random() - .5)
+    }}))
+    console.log(response.data)
+  })
+ },[])
   return (
     < KuizcardList kuizcards = { kuizcards }/>
   );
