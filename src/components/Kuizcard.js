@@ -12,7 +12,7 @@ export default function Kuizcard({kuizcard}) {
          {kuizcard.kuiz}
          <div className='kuizcard-choices'>
           {kuizcard.choices.map(choice =>{
-            return <div className='kuizcard-choice'>{choice}</div>
+            return <div className='kuizcard-choice' key={choice}>{choice}</div>
           })}
          </div>
       </div>

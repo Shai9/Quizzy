@@ -9,6 +9,13 @@ function App() {
   
   const categoryEl = useRef()
 
+  useEffect(()=> {
+    axios.get('https://opentdb.com/api_category.php')
+         .then(response => {
+          console.log(response.data)
+         })
+  })
+
 
 
  useEffect(()=> {
@@ -41,7 +48,7 @@ function App() {
     <>
     <form className="heading" onSubmit={ handleSubmit }>
       <div className="form-group">
-          <label htmlForm="category">Category</label>
+          <label htmlFor="category">Category</label>
           <select id="category" ref={categoryEl}></select>
       </div>
     <div className="wrapper">
@@ -65,7 +72,7 @@ const SAMPLE_KUIZCARDS = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     kuiz: 'Kuiz 2?',
     solution: 'Answer',
     choices:
